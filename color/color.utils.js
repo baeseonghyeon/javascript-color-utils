@@ -4,11 +4,11 @@ const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 
 export const hexToHexAlpha = (colorCode, alphaValue = 1) => {
   if (!hexColorRegex.test(colorCode)) {
-    throw new Error('Is not hexCode');
+    throw new Error("Is not hexCode");
   }
 
   if (alphaValue < 0 || alphaValue > 100) {
-    throw new Error('Percentage should be between 0 and 100');
+    throw new Error("Percentage should be between 0 and 100");
   }
 
   const alpha = Math.round((alphaValue / 100) * 255);
@@ -28,6 +28,7 @@ export function hexToRgba(hex) {
       }
     : {};
 }
+
 export function normalizeRGB(rgbObj) {
   return {
     red: rgbObj.r / 255,
@@ -36,16 +37,20 @@ export function normalizeRGB(rgbObj) {
     alpha: 1,
   };
 }
+
 export function componentToHex(c) {
   const hex = c.toString(16);
   return hex.length === 1 ? `0${hex}` : hex;
 }
+
 export function rgbToHex(r, g, b) {
   return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
 }
+
 export function getContrastText({ r, g, b }, threshold) {
-  const contrast = (Math.round(r * 299) + Math.round(g * 587) + Math.round(b * 114)) / 1000;
-  return contrast >= threshold ? 'black' : 'white';
+  const contrast =
+    (Math.round(r * 299) + Math.round(g * 587) + Math.round(b * 114)) / 1000;
+  return contrast >= threshold ? "black" : "white";
 }
 
 export function rotateColorBy(hex, rotationAmount) {
