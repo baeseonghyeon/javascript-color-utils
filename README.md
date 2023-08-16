@@ -7,20 +7,24 @@
 usage
 
 ```javascript
-const palette = new MaterialColor('#ffffff')
+const palette = new MaterialColor('#493aea')
 
-// palette result
+// palette
 {
-    50 : '#......'
-    100 : '#......'
-    200 : '#......',
-    ...
-    500 : '#ffffff',
-    900 : '#......',
-    A100 : '#......',
-    A200 : '#......',
-    A400 : '#......',
-    A700 : '#......',
+  '50': 'e9e7fc',
+  '100': 'c8c4f9',
+  '200': 'a49df5',
+  '300': '8075f0',
+  '400': '6458ed',
+  '500': '493aea',
+  '600': '4234e7',
+  '700': '392ce4',
+  '800': '3125e1',
+  '900': '2118db',
+  'A100': 'ffffff',
+  'A200': 'dcdaff',
+  'A400': 'aaa7ff',
+  'A700': '928eff',
 }
 ```
 
@@ -37,4 +41,4 @@ const palette = new MaterialColor('#ffffff')
 
 ## License
 
-[MIT]('https://choosealicense.com/licenses/mit/')
+[MIT](https://choosealicense.com/licenses/mit/)
